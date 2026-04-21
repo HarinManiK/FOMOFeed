@@ -29,7 +29,6 @@ const QUERY_MAP = {
  */
 export async function fetchTechNews(category = 'all', max = 10) {
   const query = QUERY_MAP[category] || 'technology'
-  const from = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString()
 
   const url = `${BASE_URL}/search?q=${encodeURIComponent(query)}&lang=en&from=${from}&max=${max}&sortby=publishedAt&token=${GNEWS_API_KEY}`
 
