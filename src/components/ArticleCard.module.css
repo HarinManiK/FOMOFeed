@@ -1,0 +1,149 @@
+.card {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  animation: fadeIn 0.4s ease forwards;
+  opacity: 0;
+  cursor: default;
+}
+
+.card:hover {
+  border-color: var(--border-2);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.read {
+  opacity: 0.55;
+}
+.read:hover {
+  opacity: 1;
+}
+
+.imageWrap {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background: var(--bg-3);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.03);
+}
+
+.body {
+  padding: 16px 18px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.source {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.dot {
+  color: var(--text-3);
+  font-size: 11px;
+}
+
+.time {
+  font-size: 11px;
+  color: var(--text-3);
+}
+
+.readBadge {
+  font-size: 10px;
+  color: var(--text-3);
+  background: var(--bg-4);
+  padding: 1px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  letter-spacing: 0.04em;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text);
+  cursor: pointer;
+  transition: color 0.15s;
+  letter-spacing: -0.01em;
+}
+
+.title:hover {
+  color: var(--accent);
+}
+
+.desc {
+  font-size: 12px;
+  color: var(--text-2);
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.readBtn {
+  font-size: 12px;
+  color: var(--text-3);
+  transition: color 0.15s;
+  padding: 4px 0;
+}
+
+.readBtn:hover {
+  color: var(--accent);
+}
+
+.bookmarkBtn {
+  font-size: 18px;
+  color: var(--text-3);
+  transition: color 0.15s, transform 0.15s;
+  padding: 4px 6px;
+  border-radius: 6px;
+  line-height: 1;
+}
+
+.bookmarkBtn:hover {
+  color: var(--accent);
+  transform: scale(1.2);
+}
+
+.bookmarked {
+  color: var(--accent) !important;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
